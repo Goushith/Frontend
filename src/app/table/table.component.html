@@ -1,0 +1,22 @@
+<!-- <pre>{{alldetails | json}}</pre> -->
+
+<table class="table">
+    <thead >
+      <tr>
+       
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">job</th>
+        <th scope="col">number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let users of alldetails" >
+        <td>{{users.fname}}</td>
+        <td>{{users.lname}}</td>
+        <td>{{users.job}}</td>
+        <td>{{users.number}}</td>
+      </tr>
+      
+    </tbody>
+  </table>

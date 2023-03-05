@@ -1,0 +1,64 @@
+<div class="row">
+<div class="col-4"></div>
+<div class="col-4">
+
+    <form [formGroup]="addtableform">
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="row mb-4 mt-5">
+          <div class="col">
+            <div class="form-outline">
+              <input formControlName="fname" name="fname" type="text" id="form3Example1" class="form-control" />
+              <label class="form-label" for="form3Example1">First name</label>
+            </div>
+            <div *ngIf="this.addtableform.get('fname')?.errors && this.addtableform.get('fname')?.touched" style="color: red;" >
+                Invalid
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <input formControlName="lname" name="lname" type="text" id="form3Example2" class="form-control" />
+              <label class="form-label" for="form3Example2">Last name</label>
+            </div>
+
+            <div *ngIf="this.addtableform.get('lname')?.errors && this.addtableform.get('lname')?.touched" style="color: red;">
+               Invalid. 
+            </div>
+          </div>
+
+         
+
+
+        </div>
+      
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input 
+          formControlName="job" 
+          type="text" name="job" id="form3Example3" class="form-control" />
+          <label class="form-label" for="form3Example3">Email address</label>
+        </div>
+        <div *ngIf="this.addtableform.get('job')?.errors && this.addtableform.get('job')?.touched" style="color: red;">
+            Invalid. 
+         </div>
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input formControlName="number" name="number" type="number" id="form3Example4" class="form-control" />
+          <label class="form-label" for="form3Example4">Password</label>
+        </div>
+        <div *ngIf="this.addtableform.get('job')?.errors && this.addtableform.get('job')?.touched">
+            Invalid. 
+         </div>
+
+      
+        <!-- Submit button -->
+        <button type="button" (click)="addtotable()" class="btn btn-primary btn-block mb-4">Sign up</button> <br>
+      
+ <input class="btn btn-primary btn-block mb-4" type="button" routerLink="/table" value="table" />
+
+      </form>
+
+</div>
+<div class="col-4"></div>
+
+</div>
+
